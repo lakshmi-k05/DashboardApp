@@ -1,0 +1,24 @@
+{% extends 'signin/header.html' %}
+{% block content %}
+
+<p>Document data for Batch : {{ bid }}</p>
+
+    <table class="table">
+        <th>Set Id</th>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Uploader</th>
+         <th>Date Uploaded</th>
+        {% for eachDoc in docs %}
+            <tr>
+                <td>{{  eachDoc.set_id }}</td>
+                <td>{{  eachDoc.name }}</td>
+                <td>{{  eachDoc.doc_status }}</td>
+                <td>{{  eachDoc.uploader }}</td>
+                <td>{{  eachDoc.date_uploaded }}</td>
+                 </tr>
+        {% endfor %}
+
+    </table>
+
+{% endblock %}

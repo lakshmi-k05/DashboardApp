@@ -1,0 +1,22 @@
+{% extends 'signin/header.html' %}
+{% block content %}
+
+<p>Data</p>
+
+    <table class="table">
+        <th>Set Id</th>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Documents</th>
+        {% for bat in batch %}
+            <tr>
+                <td>{{  bat.set_id }}</td>
+                <td>{{  bat.name }}</td>
+                <td>{{  bat.status }}</td>
+                <td><a href="/details/viewdocs/{{ bat.batch_id }}">Click to view docs</a></td>
+            </tr>
+        {% endfor %}
+
+    </table>
+
+{% endblock %}
